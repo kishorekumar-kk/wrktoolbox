@@ -33,7 +33,8 @@ A basic example, with a single type of benchmark, looks like this:
 ```yaml
 # the array of benchmarks contains the configuration of benchmarks to run
 benchmarks:
-  - url: https://this-is-an-example.it/api/alive
+  - test_id: this_is_an_example_test_id #preferred test identifier to be added in reports
+    url: https://this-is-an-example.it/api/alive
     threads: 10  # threads count
     concurrency: 100  # concurrent users
     duration: 30  # test duration in seconds
