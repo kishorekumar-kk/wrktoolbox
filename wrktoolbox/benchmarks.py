@@ -131,7 +131,7 @@ class BenchmarkConfig(Model):
         if responses_per_second is not None and responses_per_second > 0:
             app_variant = WrkVariant.WRK2
 
-        self.test_id = test_id
+        self.test_id = test_id or uuid4()
         self.url = url
         self.threads = threads
         self.concurrency = concurrency
@@ -223,6 +223,7 @@ class Benchmark(Model):
             raise ProcessBenchmarkException(output, p.returncode)
 
         return BenchmarkOutput.parse(output,
+                                     benchmark_id=config.test_id,
                                      suite_id=suite_id,
                                      start_time=start_time,
                                      end_time=end_time)

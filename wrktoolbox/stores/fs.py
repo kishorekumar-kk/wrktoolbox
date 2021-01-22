@@ -21,7 +21,10 @@ class FileSystemBenchmarkOutputStore(BenchmarkOutputStore):
 
     def get_file_name(self, prefix: str, suffix: str = '') -> str:
         ts = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
-        return os.path.join(self.output_folder, f'{prefix}-{ts}-{suffix}') + self.get_file_extension()
+        if (prefix == suffix):
+            return os.path.join(self.output_folder, f'{prefix}-{ts}') + self.get_file_extension()
+        else:
+            return os.path.join(self.output_folder, f'{prefix}-{ts}-{suffix}') + self.get_file_extension()
 
     @abstractmethod
     def get_file_extension(self) -> str:
