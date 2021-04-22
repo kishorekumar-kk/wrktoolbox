@@ -8,15 +8,15 @@ on:
 
   workflow_dispatch:
 
-    jobs:
-      build:
-        runs-on: ubuntu-latest
-        steps:
-          - uses: actions/checkout@v2
-          - name: Simple echo
-            run: echo Hello user!!
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Simple echo
+        run: echo Hello user!!
 
-          - name: Multiple echos
-            run: |
-              echo Running workflow....
-              echo Still running...
+      - name: Multiple echos
+        run: |
+          echo Running workflow....
+          echo Still running...
