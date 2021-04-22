@@ -7,9 +7,9 @@ def readme():
         return f.read()
 
 
-setup(name='wrktools',
+setup(name='wrk-load-tools',
       version=version,
-      description='A tool to run wrk and wrk2 benchmarks and store their output.',
+      description='A tool to run wrk/wrk2 benchmarks and store their output.',
       long_description=readme(),
       long_description_content_type='text/markdown',
       classifiers=[
@@ -18,9 +18,9 @@ setup(name='wrktools',
           'Programming Language :: Python :: 3',
           'Operating System :: Unix'
       ],
-      url='https://github.com/RobertoPrevato/wrktoolbox',
-      author='RobertoPrevato',
-      author_email='roberto.prevato@gmail.com',
+      url='https://github.com/kishorekumar-kk/wrktoolbox',
+      author = 'Kishore Kumar',
+      author_email = 'mailtokishorekumar.s@gmail.com',
       keywords='wrk runner benchmarks load performance tests',
       license='MIT',
       packages=['wrktoolbox',
