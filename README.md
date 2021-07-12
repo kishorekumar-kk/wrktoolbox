@@ -18,7 +18,7 @@ A tool to run wrk and wrk2 benchmarks, store their output, and generate reports.
 1. install
 
 ```bash
-pip install wrktools
+pip install wrk-load-tools
 ```
 
 2. verify that the cli works (optional)
